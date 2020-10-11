@@ -1,0 +1,152 @@
+{
+	"info": {
+		"_postman_id": "c5893b92-7d72-44b7-8c50-e9129e5415f9",
+		"name": "Store API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/store",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"glorious\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{LOCAL_HOST}}/store",
+					"host": [
+						"{{LOCAL_HOST}}"
+					],
+					"path": [
+						"store"
+					]
+				},
+				"description": "Create_store"
+			},
+			"response": []
+		},
+		{
+			"name": "/store/<string: name>",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{LOCAL_HOST}}/store/glorious",
+					"host": [
+						"{{LOCAL_HOST}}"
+					],
+					"path": [
+						"store",
+						"glorious"
+					]
+				},
+				"description": "Get store by name"
+			},
+			"response": []
+		},
+		{
+			"name": "/store",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{LOCAL_HOST}}/store",
+					"host": [
+						"{{LOCAL_HOST}}"
+					],
+					"path": [
+						"store"
+					]
+				},
+				"description": "Get all stores"
+			},
+			"response": []
+		},
+		{
+			"name": "/store/<string: name>/item",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"gmmk\",\n    \"price\": \"$70.00 usd\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{LOCAL_HOST}}/store/glorious/item",
+					"host": [
+						"{{LOCAL_HOST}}"
+					],
+					"path": [
+						"store",
+						"glorious",
+						"item"
+					]
+				},
+				"description": "Create an item on store"
+			},
+			"response": []
+		},
+		{
+			"name": "/store/<string: name>/item",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{LOCAL_HOST}}/store/My Wonderful Store/item",
+					"host": [
+						"{{LOCAL_HOST}}"
+					],
+					"path": [
+						"store",
+						"My Wonderful Store",
+						"item"
+					]
+				},
+				"description": "Get item on the store"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "7ffd2c08-eb0c-403d-8547-c98f84ccdce0",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "f4aab2ca-360c-4a75-a7e1-0b8fdb04504b",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "def39ffb-5687-4958-ab4d-004da0796300",
+			"key": "LOCAL_HOST",
+			"value": "http://127.0.0.1:5000"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
